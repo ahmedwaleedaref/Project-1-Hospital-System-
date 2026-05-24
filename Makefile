@@ -2,13 +2,13 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -Wall -std=c++11
+CXXFLAGS = -Wall -std=c++17
 
-# Target executable name
-TARGET = HosiptalSystem
+# Get source file from command line or use default
+SRC ?= HosiptalSystem.cpp
 
-# Source file
-SRC = HosiptalSystem.cpp
+# Target executable name (derived from source file without extension)
+TARGET = $(basename $(SRC))
 
 # Default target
 all: $(TARGET)
